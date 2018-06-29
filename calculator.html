@@ -3,37 +3,39 @@
 <head>
 	<title>Calculator</title>
   <link rel="stylesheet" type="text/css" href="calculator.css">
+  <script type="text/javascript" src="calculator.js"></script>
 </head>
 <body>
+  <div class="container">
 	<table>
     <tr>
-    <input type="textarea" name="">
+    <input id="calculator_result" type="textarea" name="">
   </tr>
   <tr>
-    <th><button class="button_calculator">1</button></th>
-    <th><button class="button_calculator">2</button></th>
-    <th><button class="button_calculator">3</button></th>
-    <th><button class="button_calculator"></button></th>
+    <th><button id="1" class="button_calculator" onclick="addNumber('1')">1</button></th>
+    <th><button id="2" class="button_calculator" onclick="addNumber('2')">2</button></th>
+    <th><button id="3" class="button_calculator" onclick="addNumber('3')">3</button></th>
+    <th><button id="0" class="button_calculator" onclick="addNumber('0')">0</button></th>
   </tr>
   <tr>
-    <th><button class="button_calculator">4</button></th>
-    <th><button class="button_calculator">5</button></th>
-    <th><button class="button_calculator">6</button></th>
-    <th><button class="button_calculator"></button></th>
+    <th><button id="4" class="button_calculator" onclick="addNumber('4')">4</button></th>
+    <th><button id="5" class="button_calculator" onclick="addNumber('5')">5</button></th>
+    <th><button id="6" class="button_calculator" onclick="addNumber('6')">6</button></th>
+    <th><button class="button_calculator" onclick="clearDisplay()">C</button></th>
   </tr>
   <tr>
-    <th><button class="button_calculator">7</button></th>
-    <th><button class="button_calculator">8</button></th>
-    <th><button class="button_calculator">9</button></th>
-    <th><button class="button_calculator"></button></th>
+    <th><button id="7" class="button_calculator" onclick="addNumber('7')">7</button></th>
+    <th><button id="8" class="button_calculator" onclick="addNumber('8')">8</button></th>
+    <th><button id="9" class="button_calculator" onclick="addNumber('9')">9</button></th>
+    <th><button id="divide" class="button_calculator" onclick="setOperation('divide')">/</button></th>
   </tr>
   <tr>
-    <th><button class="button_calculator">+</button></th>
-    <th><button class="button_calculator">-</button></th>
-    <th><button class="button_calculator">*</button></th>
-    <th><button class="button_calculator">/</button></th>
+    <th><button id="plus" class="button_calculator" onclick="setOperation('add')">+</button></th>
+    <th><button id="minus" class="button_calculator" onclick="setOperation('subtract')">-</button></th>
+    <th><button id="multiply" class="button_calculator" onclick="setOperation('multiply')">*</button></th>
+    <th><button id="equal" class="button_calculator" onclick="calculate()">=</button></th>
   </tr>
 	</table>
-
+</div>
 </body>
 </html>
