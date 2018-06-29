@@ -1,4 +1,4 @@
- 	displayNum = "";
+ displayNum = "";
     storedNum = "";
     operation = 0;
     queuedOperation = 0;
@@ -75,7 +75,7 @@ function setOperation(command) {
     if (command == 'multiply') {
         operation = 3;
     }
-    else if (command == 'divide') {
+    if (command == 'divide') {
         operation = 4;
     }
 
@@ -102,6 +102,9 @@ function calculate() {
     }
     else if (operation == 3) {
         displayNum = evalStored * evalDisplay;
+    }
+    else if (operation == 4) {
+        displayNum = evalStored / evalDisplay;
     }
     // Change display to the answer
     display.value = displayNum;
